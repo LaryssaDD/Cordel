@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituição de Cordéis</title>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background-color: #f9f9f9; color: #333; }
+    header { background: #333; color: #fff; padding: 1rem 0; text-align: center; }
+    nav ul { list-style: none; display: flex; justify-content: center; background-color: #444; }
+    nav ul li { margin: 0 15px; }
+    nav ul a { color: white; text-decoration: none; padding: 0.5rem 1rem; display: inline-block; }
+    nav ul a:hover { background: #555; }
+    main { padding: 2rem; text-align: center; }
+    .hidden { display: none; }
+    footer { background: #333; color: #fff; text-align: center; padding: 1rem 0; position: relative; bottom: 0; width: 100%; }
+    .calameo-container { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#agenda" class="menu-link">Agenda</a></li>
+        <li><a href="#colecoes" class="menu-link">Coleções</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="content-section">
+      <h1>Bem-vindo à Instituição de Cordéis</h1>
+      <p>Aqui você encontra cultura, história e arte em forma de cordel.</p>
+    </section>
+
+    <section id="sobre" class="content-section hidden">
+      <h2>Sobre a Instituição</h2>
+      <p>A Instituição de Cordéis busca preservar e divulgar essa rica tradição literária.</p>
+    </section>
+
+    <section id="agenda" class="content-section hidden">
+      <h2>Agenda Mensal</h2>
+      <p>Confira os próximos eventos relacionados aos nossos cordéis!</p>
+    </section>
+
+    <section id="colecoes" class="content-section hidden">
+      <h2>Coleções de Cordéis</h2>
+      <div class="calameo-container">
+        <iframe src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=latestPublished&theme=wood&bgColor=&thumbSize=normal&showTitle=true&showShadow=true&showGloss=true&showInfo=account&linkTo=view&linkTarget=_blank" width="100%" height="500" frameborder="0" allowfullscreen allowtransparency></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Instituição de Cordéis. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        document.querySelectorAll('.content-section').forEach(section => section.classList.add('hidden'));
+        document.getElementById(targetId).classList.remove('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
