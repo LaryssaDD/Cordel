@@ -34,6 +34,13 @@
             margin: 0 auto;
         }
 
+        .menu {
+            background-color: #40916C;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
         /* Menu de navegação */
         nav {
             background-color: #40916C;
@@ -110,6 +117,20 @@
             margin-top: 20px;
         }
 
+        .footer-contact {
+            text-align: left;
+            margin: 30px;
+        }
+
+        .icons {
+            width: 35px;
+            /* colocar um do lado do outro*/
+            display: inline;
+            /* centralizar o texto verticalmente*/
+            vertical-align: middle;
+            
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
@@ -134,11 +155,13 @@
 
 </header>
 
-<nav>
-    <a href="#sobre">Sobre Nós</a>
-    <a href="#noticias">Notícias</a>
-    <a href="#avisos">Avisos</a>
-    <a href="#galeria">Galeria de Fotos</a>
+<nav class="menu">
+    |
+    <a href="#inicio">Início</a> |
+    <a href="#sobre">Sobre nós</a> |
+    <a href="#agenda">Agenda</a> |
+    <a href="#avisos">Avisos</a> |
+    <a href="#galeria">Galeria</a> |
 </nav>
 
 <div class="container">
@@ -147,8 +170,8 @@
         <p>O Sindicato dos Trabalhadores Rurais de Quixadá tem como objetivo defender os direitos dos trabalhadores rurais, promover melhorias nas condições de trabalho e representar os interesses da categoria perante os órgãos competentes.</p>
     </section>
 
-    <section class="news" id="noticias">
-        <h2>Notícias</h2>
+    <section class="diary" id="agenda">
+        <h2>Agenda</h2>
         <p>Fique por dentro das últimas notícias e atualizações sobre o sindicato e a comunidade rural de Quixadá.</p>
         <article>
             <h3>Título da Notícia</h3>
@@ -166,8 +189,8 @@
     </section>
 
     <section id="galeria">
-        <h2>Galeria de Fotos</h2>
-        <div class="gallery">
+        <h2>Galeria</h2>
+        <div class="galery">
             <!--<img src="caminho/para/imagem1.jpg" alt="Descrição da imagem 1">
             <img src="caminho/para/imagem2.jpg" alt="Descrição da imagem 2">
             <img src="caminho/para/imagem3.jpg" alt="Descrição da imagem 3"> -->
@@ -175,9 +198,38 @@
         </div>
     </section>
 </div>
+<div class="icons">
+    <p style="background-color: #40916C; display: flex; justify-content: center; padding: 10px; color: white; ">
+            <b>Contato:</b>
+            <a href="https://https://wa.me/5588981394179" target="_blank" style="color: white; text-decoration: none; padding-left: 50px;">
+                <img class="icons" src="https://i.postimg.cc/ZnyWD8P4/whats.png" alt="Whatsapp">
+                WhatsApp 
+            </a>
+            <a href="https://instagram.com/straafquixada" target="_blank" style="color: white; text-decoration: none; padding-left: 50px;">
+                <img class="icons" src="https://i.postimg.cc/WtLdRdSr/isnta.png" alt="Instagram">
+                Instagram 
+                <a href="https://maps.app.goo.gl/h3denWxCvx3QRhvY9" target="_blank" style="color: white; text-decoration: none; padding-left: 50px;">
+                    <img class="icons" src="https://i.postimg.cc/L4qvMGN6/loc.png" alt="Endereço">
+                    R. Rodrigues Júnior, 1042 - Centro, Quixadá - CE
+                    
+                </a>
+            </a> 
+        </p>
+        </div>
 
 <footer>
+    <div class="footer-contact">
+        
+    </div>
+    
+    <!--<div class="footer-social">
+        <p><strong>Siga-nos nas redes sociais:</strong></p>
+        <a href="https://www.facebook.com/exemplo" target="_blank">🌐 Facebook</a> |
+        <a href="https://www.instagram.com/exemplo" target="_blank">📸 Instagram</a> |
+        <a href="https://wa.me/5588999999999" target="_blank">💬 WhatsApp</a>
+    </div> -->
     <p>&copy; 2025 Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá. Todos os direitos reservados.</p>
+
 </footer>
 
 </body>
