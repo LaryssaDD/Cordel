@@ -1,92 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instituição de Cordéis</title>
-  
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background-color: #f9f9f9; color: #333; }
-    header { background: #333; color: #fff; padding: 1rem 0; text-align: center; }
-    nav ul { list-style: none; display: flex; justify-content: center; background-color: #444; }
-    nav ul li { margin: 0 15px; }
-    nav ul a { color: white; text-decoration: none; padding: 0.5rem 1rem; display: inline-block; }
-    nav ul a:hover { background: #555; }
-    main { padding: 2rem; text-align: center; }
-    .hidden { display: none; }
-    footer { background: #333; color: #fff; text-align: center; padding: 1rem 0; position: relative; bottom: 0; width: 100%; }
-    .calameo-container { margin-top: 20px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRAAF Quixadá</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* Fonte moderna e reset básico */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
-  
-    /* Container para manter a proporção */
-    .calameo-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* Proporção 16:9 */
-      height: 0;
-      overflow: hidden;
-    }
+        /* Cabeçalho estilizado */
+        header {
+            background-color: #2D6A4F;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .calameo-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+        .logo {
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Menu de navegação */
+        nav {
+            background-color: #40916C;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #D8F3DC;
+            text-decoration: none;
+        }
+
+        /* Container principal */
+        .container {
+            padding: 40px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Títulos */
+        h2 {
+            color: #2D6A4F;
+            border-left: 5px solid #40916C;
+            padding-left: 10px;
+            font-size: 1.8em;
+        }
+
+        /* Estilização de seções */
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Galeria de imagens */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2D6A4F;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home" class="menu-link">Início</a></li>
-        <li><a href="#sobre" class="menu-link">Sobre</a></li>
-        <li><a href="#agenda" class="menu-link">Agenda</a></li>
-        <li><a href="#colecoes" class="menu-link">Coleções</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="content-section">
-      <h1>Bem-vindo à Instituição de Cordéis</h1>
-      <p>Aqui você encontra cultura, história e arte em forma de cordel.</p>
+<header>
+    <!-- <h1>Sindicato dos Trabalhadores Rurais Agricultores e Agticultoras de Quixadá</h1> -->
+    <!--adicionar imagem com link do imgur-->
+    <img class="logo" src="https://i.postimg.cc/fTtpvfR1/path1.png" alt="Logo STRAAF Quixadá">
+
+</header>
+
+<nav>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#noticias">Notícias</a>
+    <a href="#avisos">Avisos</a>
+    <a href="#galeria">Galeria de Fotos</a>
+</nav>
+
+<div class="container">
+    <section id="sobre">
+        <h2>Sobre o Sindicato</h2>
+        <p>O Sindicato dos Trabalhadores Rurais de Quixadá tem como objetivo defender os direitos dos trabalhadores rurais, promover melhorias nas condições de trabalho e representar os interesses da categoria perante os órgãos competentes.</p>
     </section>
 
-    <section id="sobre" class="content-section hidden">
-      <h2>Sobre a Instituição</h2>
-      <p>A Instituição de Cordéis busca preservar e divulgar essa rica tradição literária.</p>
+    <section class="news" id="noticias">
+        <h2>Notícias</h2>
+        <p>Fique por dentro das últimas notícias e atualizações sobre o sindicato e a comunidade rural de Quixadá.</p>
+        <article>
+            <h3>Título da Notícia</h3>
+            <p>Descrição breve da notícia. <a href="#">Leia mais...</a></p>
+        </article>
     </section>
 
-    <section id="agenda" class="content-section hidden">
-      <h2>Agenda Mensal</h2>
-      <p>Confira os próximos eventos relacionados aos nossos cordéis!</p>
+    <section class="notices" id="avisos">
+        <h2>Avisos</h2>
+        <p>Aqui você encontrará os avisos importantes sobre reuniões, eventos e outras informações relevantes.</p>
+        <article>
+            <h3>Título do Aviso</h3>
+            <p>Descrição breve do aviso. <a href="#">Leia mais...</a></p>
+        </article>
     </section>
 
-    <section id="colecoes" class="content-section hidden">
-      <h2>Coleções de Cordéis</h2>
-      <div class="calameo-container">
-        <iframe src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=latestPublished&theme=wood&bgColor=&thumbSize=normal&showTitle=true&showShadow=true&showGloss=true&showInfo=account&linkTo=view&linkTarget=_blank" width="100%" height="500" frameborder="0" allowfullscreen allowtransparency></iframe>
-      </div>
+    <section id="galeria">
+        <h2>Galeria de Fotos</h2>
+        <div class="gallery">
+            <!--<img src="caminho/para/imagem1.jpg" alt="Descrição da imagem 1">
+            <img src="caminho/para/imagem2.jpg" alt="Descrição da imagem 2">
+            <img src="caminho/para/imagem3.jpg" alt="Descrição da imagem 3"> -->
+            <iframe src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=title&theme=wood&bgColor=&thumbSize=large&showTitle=true&showShadow=true&showGloss=true&showInfo=no&linkTo=view&linkTarget=_blank" width="100%" height="240" frameborder="0" allowfullscreen allowtransparency></iframe>
+        </div>
     </section>
-  </main>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Instituição de Cordéis. Todos os direitos reservados.</p>
-  </footer>
+<footer>
+    <p>&copy; 2025 Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá. Todos os direitos reservados.</p>
+</footer>
 
-  <script>
-    document.querySelectorAll('.menu-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        document.querySelectorAll('.content-section').forEach(section => section.classList.add('hidden'));
-        document.getElementById(targetId).classList.remove('hidden');
-      });
-    });
-  </script>
 </body>
 </html>
