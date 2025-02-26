@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STRAAF Quixadá</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!--<link rel="stylesheet" href="styles.css"> -->
     <style>
         /* Fonte moderna e reset básico */
         body {
@@ -14,6 +14,9 @@
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Cabeçalho estilizado */
@@ -41,20 +44,23 @@
             text-align: center;
         }
 
+        .menu :hover {
+            background-color: #2D6A4F;
+        }
+
         /* Menu de navegação */
         nav {
             background-color: #40916C;
             padding: 15px;
             text-align: center;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 20px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 1.1em;
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -69,6 +75,7 @@
             padding: 40px 10%;
             max-width: 1200px;
             margin: auto;
+            flex: 1; /* Faz o container ocupar o espaço restante */
         }
 
         /* Títulos */
@@ -88,11 +95,39 @@
             margin-bottom: 20px;
         }
 
-        /* Galeria de imagens */
+        /* Seção inicial */
+        #inicio {
+            background-color: #D8F3DC; /* Fundo verde claro */
+            color: #333;
+            padding: 10px 10%;
+            text-align: center;
+        }
+
+        /* Estilo da caixa de boas-vindas */
+        .welcome {
+            
+            border-radius: 8px; /* Bordas arredondadas */
+            margin-bottom: 20px; /* Margem inferior */
+            text-align: left; /* Centraliza o texto */
+        }
+
+        /* Tabela */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        td {
+            vertical-align: top; /* Alinha o conteúdo ao topo */
+            padding: 10px; /* Padding interno */
+        }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
+            padding: 0 10%; /* Padding lateral para não colar nas bordas */
         }
 
         .gallery img {
@@ -109,11 +144,11 @@
 
         /* Rodapé */
         footer {
+            width: 100%;
             background-color: #2D6A4F;
             color: white;
             text-align: center;
-            padding: 15px 0;
-            font-size: 0.9em;
+            padding: 15px;
             margin-top: 20px;
         }
 
@@ -124,11 +159,26 @@
 
         .icons {
             width: 35px;
-            /* colocar um do lado do outro*/
             display: inline;
-            /* centralizar o texto verticalmente*/
             vertical-align: middle;
-            
+        }
+
+        /* Contato */
+        .contact-bar {
+            background-color: #40916C;
+            display: flex;
+            justify-content: space-around; /* Distribui os itens igualmente */
+            padding: 10px;
+            color: white;
+            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
+        }
+
+        .contact-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            flex: 1 1 30%; /* Permite que os itens cresçam e encolham, ocupando até 30% da largura */
+            text-align: center; /* Centraliza o texto */
         }
 
         /* Responsividade */
@@ -136,132 +186,298 @@
             .container {
                 padding: 20px;
             }
+
             nav {
                 flex-direction: column;
+                flex-wrap: wrap;
             }
+
             nav a {
                 margin-bottom: 10px;
             }
+
+            .contact-bar a {
+                flex: 1 1 100%; /* Em telas menores, cada item ocupa 100% da largura */
+            }
         }
 
+        .texto-escondido {
+            display: none;
+        }
+
+        #muda {
+            background-color: #40916C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #muda:hover {
+            background-color: #2D6A4F;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <!-- <h1>Sindicato dos Trabalhadores Rurais Agricultores e Agticultoras de Quixadá</h1> -->
-    <!--adicionar imagem com link do imgur-->
-    <img class="logo" src="https://i.postimg.cc/fTtpvfR1/path1.png" alt="Logo STRAAF Quixadá">
+    <header>
+        <img class="logo" src="https://i.postimg.cc/fTtpvfR1/path1.png" alt="Logo STRAAF Quixadá">
+    </header>
 
-</header>
+    <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#avisos">Avisos</a>
+        <a href="#galeria">Galeria</a>
+    </nav>
 
-<nav class="menu">
-    |
-    <a href="#inicio">Início</a> |
-    <a href="#sobre">Sobre nós</a> |
-    <a href="#agenda">Agenda</a> |
-    <a href="#avisos">Avisos</a> |
-    <a href="#galeria">Galeria</a> |
-</nav>
-
-<div class="container">
-    <section id="sobre">
-        <h2>Sobre o Sindicato</h2>
-        <p>O Sindicato dos Trabalhadores Rurais de Quixadá tem como objetivo defender os direitos dos trabalhadores rurais, promover melhorias nas condições de trabalho e representar os interesses da categoria perante os órgãos competentes.</p>
-        <p> &emsp;O Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá foi fundado em 3
-            de agosto de 1963 e, desde então, tem sido um pilar de apoio e representatividade para os trabalhadores
-            rurais da região. Com um olhar atento às necessidades do campo, a instituição oferece serviços como
-            assessoria jurídica e previdenciária, além de incentivar a organização comunitária e fortalecer a
-            agricultura familiar.</p>
-        <p>&emsp; Atualmente, a associação é liderada por Conceição Sousa, a primeira mulher a assumir a presidência
-            da entidade. Sua jornada na liderança teve início em 2013, e hoje ela se encontra em seu quarto e último
-            mandato. Além da presidência, a instituição conta com sete secretarias, cada uma com um papel
-            fundamental na estrutura do sindicato:</p>
-        <ul>
-            <li><b>Secretaria de Finanças</b> – <i>Erivalda</i></li>
-            <li><b>Secretaria Geral de Documentos e Registros</b> – <i>Glaucivania</i></li>
-            <li><b>Secretaria de Políticas Agrícolas e Meio Ambiente</b> – <i>Francisco de Assis</i></li>
-            <li><b>Secretaria de Formação e Organização Sindical</b> – <i>Egileu</i></li>
-            <li><b>Secretaria da Juventude Rural</b> – <i>Rair</i></li>
-            <li><b>Secretaria da Mulher Agrícola</b> – <i>Gleudaina</i></li>
-            <li><b>Secretaria da Terceira Idade</b> – <i>Tatiana</i></li>
-        </ul>
-        <p>&emsp; Guiado pelos princípios da solidariedade, justiça social e sustentabilidade, o sindicato
-            trabalha incansavelmente para garantir que os direitos dos agricultores familiares sejam
-            respeitados. A instituição se dedica à valorização da agricultura local e ao fortalecimento das
-            comunidades rurais, buscando sempre melhorias nas condições de vida e de trabalho dos produtores do
-            campo. </p>
-        <p>&emsp; Além disso, o sindicato estabelece parcerias estratégicas com órgãos públicos e privados, que
-            contribuem para o desenvolvimento de políticas voltadas ao crescimento da agricultura familiar e ao
-            bem-estar das comunidades rurais.</p>
-        <p>&emsp; A participação ativa dos trabalhadores rurais é essencial para fortalecer essa luta. Por isso,
-            o sindicato convida todos a conhecerem seus serviços, esclarecerem dúvidas e se unirem na defesa dos
-            direitos e na construção de um futuro melhor para o campo.</p>
-        <p>&emsp; Para mais informações, <u>entre em contato</u> ou visite nossa sede</p>
+    <div class="container">
+        <section id="inicio">
+            <div class="welcome">
+                <table>
+                    <tr>
+                        <td colspan="2"> <!--Colspan: une as células em uma única linha --> 
+                            <h2>Seja bem-vindo ao STRAAF Quixadá</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>O site do Sindicato dos Trabalhadores Rurais de Quixadá é um espaço dedicado a manter você
+                                sempre informado. Aqui, você encontra avisos importantes, acompanha a agenda de eventos e
+                                conhece mais sobre a atuação do sindicato, além de ter acesso a conteúdos exclusivos 
+                                desenvolvidos para fortalecer a agricultura familiar e a comunidade rural.</p>
+                        </td> 
+                        <td style="padding-left: 20px;">
+                            <img src="https://i.postimg.cc/8CXDDkqK/logo-verde-site.png" alt="Logo do STRAAF Quixadá"
+                                width="150px" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </section>
-    </section>
 
-    <section class="diary" id="agenda">
-        <h2>Agenda</h2>
-        <p>Fique por dentro das últimas notícias e atualizações sobre o sindicato e a comunidade rural de Quixadá.</p>
-        <article>
-            <h3>Título da Notícia</h3>
-            <p>Descrição breve da notícia. <a href="#">Leia mais...</a></p>
-        </article>
-    </section>
+        <section id="sobre">
+            <h2>Sobre o Sindicato</h2>
+            <p> O Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá foi fundado em 3
+                de agosto de 1963 e, desde então, tem sido um pilar de apoio e representatividade para os trabalhadores
+                rurais da região. Com um olhar atento às necessidades do campo, a instituição oferece serviços como
+                assessoria jurídica e previdenciária, além de incentivar a organização comunitária e fortalecer a
+                agricultura familiar.</p>
+            <p>&emsp; Atualmente, a associação é liderada por Conceição Sousa, a primeira mulher a assumir a
+                presidência da entidade. Sua jornada na liderança teve início em 2013, e hoje ela se encontra em seu quarto e
+                último mandato. Além da presidência, a instituição conta com sete secretarias, cada uma com um papel
+                fundamental na estrutura do sindicato:</p>
+            <ul>
+                <li><b>Secretaria de Finanças</b> – <i>Erivalda</i></li>
+                <li><b>Secretaria Geral de Documentos e Registros</b> – <i>Glaucivania</i></li>
+                <li><b>Secretaria de Políticas Agrícolas e Meio Ambiente</b> – <i>Francisco de Assis</i></li>
+                <li><b>Secretaria de Formação e Organização Sindical</b> – <i>Egileu</i></li>
+                <li><b>Secretaria da Juventude Rural</b> – <i>Rair</i></li>
+                <li><b>Secretaria da Mulher Agrícola</b> – <i>Gleudaina</i></li>
+                <li><b>Secretaria da Terceira Idade</b> – <i>Tatiana</i></li>
+            </ul>
+            <p>&emsp; Guiado pelos princípios da solidariedade, justiça social e sustentabilidade, o sindicato
+                trabalha incansavelmente para garantir que os direitos dos agricultores familiares sejam
+                respeitados. A instituição se dedica à valorização da agricultura local e ao fortalecimento das
+                comunidades rurais, buscando sempre melhorias nas condições de vida e de trabalho dos produtores do
+                campo. </p>
+            <p>&emsp; Além disso, o sindicato estabelece parcerias estratégicas com órgãos públicos e privados, que
+                contribuem para o desenvolvimento de políticas voltadas ao crescimento da agricultura familiar e ao
+                bem-estar das comunidades rurais.</p>
+            <p>&emsp; A participação ativa dos trabalhadores rurais é essencial para fortalecer essa luta. Por isso,
+                o sindicato convida todos a conhecerem seus serviços, esclarecerem dúvidas e se unirem na defesa dos
+                direitos e na construção de um futuro melhor para o campo.</p>
+            <p>&emsp; Para mais informações, entre em contato ou visite nossa sede.</p>
+        </section>
 
-    <section class="notices" id="avisos">
-        <h2>Avisos</h2>
-        <p>Aqui você encontrará os avisos importantes sobre reuniões, eventos e outras informações relevantes.</p>
-        <article>
-            <h3>Título do Aviso</h3>
-            <p>Descrição breve do aviso. <a href="#">Leia mais...</a></p>
-        </article>
-    </section>
+        <section class="diary" id="agenda">
+            <h2>Agenda</h2>
+            <p style="font-size: small;">Fique por dentro das últimas notícias e atualizações sobre o sindicato e a comunidade rural de Quixadá.
+            </p>
+            <article>
+                <h3><b>Março de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><b>06/03/2025</b> Retorno às atividades</li> </br>
+                    <li><b>11/03/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li></br>
+                    <li><b>12/03/2025</b> Reunião dos diretores</li> </br>
+                    <li><b>13/03/2025</b> Encontro das Mulheres</li> </br>
+                    <li><b>17/03/2025</b> Encontro da Juventude</li> </br>
+                    <li><b>18/03/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                    <li><b>19/03/2025</b> Reunião dos diretores</li> </br>
+                    <li><b>25/03/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                    <li><b>26/03/2025</b> Reunião dos diretores</li> </br>
+                </ul>
+                <h3><b>Abril de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><b>01/04/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                    <li><b>03/04/2025</b> Encontro dos Idosos </li> </br>
+                    <li><b>08/04/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                    <li><b>09/03/2025</b> Reunião dos diretores</li> </br>
+                    <li><b>15/04/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                    <li><b>16/03/2025</b> Reunião dos diretores</li> </br>
+                    <li><b>22/04/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                    <li><b>23/03/2025</b> Reunião dos diretores</li> </br>
+                    <li><b>29/03/2025</b> Feira Agroecológica <i>*Toda Terça-feira</i></li> </br>
+                </ul>
+                <h3><b>Maio de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li>
+                </ul>
+                <h3><b>Junho de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li>
+                </ul>
+                <h3><b>Julho de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li> 
+                </ul>
+                <h3><b>Agosto de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li> 
+                </ul>
+                <h3><b>Setembro de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li> 
+                </ul>
+                <h3><b>Outubro de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li> 
+                </ul>
+                <h3><b>Novembro de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li> 
+                </ul>
+                <h3><b>Dezembro de 2025</b></h3>
+                <ul style="list-style-type: none;">
+                    <li><i>Nenhum evento cadastrado até o momento.</i></li> 
+                </ul>
 
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <div class="galery">
-            <!--<img src="caminho/para/imagem1.jpg" alt="Descrição da imagem 1">
-            <img src="caminho/para/imagem2.jpg" alt="Descrição da imagem 2">
-            <img src="caminho/para/imagem3.jpg" alt="Descrição da imagem 3"> -->
-            <iframe src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=title&theme=wood&bgColor=&thumbSize=large&showTitle=true&showShadow=true&showGloss=true&showInfo=no&linkTo=view&linkTarget=_blank" width="100%" height="240" frameborder="0" allowfullscreen allowtransparency></iframe>
-        </div>
-    </section>
-</div>
-<div class="icons">
-    <p style="background-color: #40916C; display: flex; justify-content: center; padding: 10px; color: white; ">
-            <b>Contato:</b>
-            <a href="https://wa.me/5588981394179" target="_blank" style="color: white; text-decoration: none; padding-left: 50px;">
-                <img class="icons" src="https://i.postimg.cc/ZnyWD8P4/whats.png" alt="Whatsapp">
-                WhatsApp 
-            </a>
-            <a href="https://instagram.com/straafquixada" target="_blank" style="color: white; text-decoration: none; padding-left: 50px;">
-                <img class="icons" src="https://i.postimg.cc/WtLdRdSr/isnta.png" alt="Instagram">
-                Instagram 
-                <a href="https://maps.app.goo.gl/h3denWxCvx3QRhvY9" target="_blank" style="color: white; text-decoration: none; padding-left: 50px;">
-                    <img class="icons" src="https://i.postimg.cc/L4qvMGN6/loc.png" alt="Endereço">
-                    R. Rodrigues Júnior, 1042 - Centro, Quixadá - CE
-                    
-                </a>
-            </a> 
-        </p>
-        </div>
+            </article>
+        </section>
 
-<footer>
-    <div class="footer-contact">
-        
+        <section class="notices" id="avisos">
+            <h2>Avisos</h2>
+            <p style="font-size: small;">Aqui você encontrará os avisos importantes sobre reuniões, eventos e outras informações relevantes.</p>
+            <article>
+                <h3><b>Recesso de Carnaval</b></h3>
+                <p> Informamos que estaremos em recesso para o Carnaval e nossas atividades estarão suspensas durante este
+                    período. Retornaremos com nossas ações no dia 06/03/2025. Aproveite este tempo para descansar e se preparar
+                    para um novo ciclo de trabalho!</p>
+                <div class="texto-escondido" id="texto-escondido1">
+                    <p>📅 <b>Período de Recesso:</b> 01/03/2025 a 05/03/2025 </p>
+                    <p>⏰ <b>Retorno:</b> 06/03/2025, expediente normal </p>
+                    <p>📍 <b>Local:</b> Sede do Sindicato</p>
+                    <p> <i>Que este período seja de descanso e renovação! Retornaremos com ainda mais energia para seguir na luta pelos direitos dos trabalhadores rurais. </i></p>
+                </div>
+                <button onclick="clique('texto-escondido1', this)" id="muda">Mostrar mais</button>
+            </article>
+            <br>
+            <article>
+                <h3><b>Retorno das Atividades</b></h3>
+                <p> Informamos que, após o feriado de Carnaval, retomaremos nossas atividades normalmente. Convidamos a
+                    todos para seguirmos firmes em nossas ações, fortalecendo a agricultura familiar e a luta pelos direitos dos
+                    trabalhadores rurais.</p>
+                <div class="texto-escondido" id="texto-escondido2">
+                    <p>📅 <b>Data de Retorno:</b> 06/03/2025 </p>
+                    <p>⏰ <b>Horário:</b> 08h </p>
+                    <p>📍 <b>Local:</b> Sede do Sindicato</p>
+                    <p> <i>Com energia renovada, seguimos firmes no compromisso de fortalecer a agricultura familiar e defender os direitos dos trabalhadores rurais. Vamos juntos!</i> </p>
+                    <p>Para mais detalhes, entre em contato conosco! 📲</p>
+                </div>
+                <button onclick="clique('texto-escondido2', this)" id="muda">Mostrar mais</button>
+            </article>
+            <br>
+            <article>
+                <h3><b>Encontro das Mulheres</b></h3>
+                <p> Venha participar do Encontro das Mulheres na Bodega Ecológica, um momento especial de troca de
+                    experiências, fortalecimento e união! Será uma oportunidade para compartilhar vivências, dialogar
+                    sobre temas importantes e fortalecer nossa rede de apoio...</p>
+                <div class="texto-escondido" id="texto-escondido3">
+                    <p>📍 <b>Local:</b> Bodega Ecológica – Rua Autran Moreno, 162, Centro, Quixadá </p>
+                    <p>📅 <b>Data:</b> 13/03/2025 </p>
+                    <p>⏰ <b>Horário:</b> 08h - 11h </p>
+                    <p> <i>Junt@s, seguimos construindo um espaço de valorização, luta e protagonismo feminino. Esperamos por você! 💜✨</i></p>
+                    <p>Para mais detalhes, entre em contato conosco! 📲</p>
+                </div>
+                <button onclick="clique('texto-escondido3', this)" id="muda">Mostrar mais</button>
+            </article>
+            <br>
+            <article>
+                <h3><b>Encontro da Juventude</b></h3>
+                <p> E aí, juventude! Esse momento é nosso!</p>
+                <p> O STRAAF convida vocês para um encontro mais que especial, onde vamos trocar ideias,
+                    compartilhar experiências e fortalecer a nossa voz no campo. Será uma oportunidade para debater
+                    desafios, conquistas e construir juntos um futuro melhor para a juventude rural de Quixadá!</p>
+                <div class="texto-escondido" id="texto-escondido4">
+                    <p>📍 <b>Local:</b> Bodega Ecológica – Rua Autran Moreno, 162, Centro, Quixadá </p>
+                    <p>📅 <b>Data:</b> 17/03/2025 </p>
+                    <p>⏰ <b>Horário:</b> 08h - 11h </p>
+                    <p> <i>A juventude do campo tem voz e vez! Vamos juntos fortalecer nossa atuação e construir novas oportunidades para o futuro. Te esperamos lá! </i></p>
+                    <p>Para mais detalhes, entre em contato conosco! 📲</p>
+                </div>
+                <button onclick="clique('texto-escondido4', this)" id="muda">Mostrar mais</button>
+            </article>
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <iframe
+                    src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=title&theme=wood&bgColor=&thumbSize=large&showTitle=true&showShadow=true&showGloss=true&showInfo=no&linkTo=view&linkTarget=_blank"
+                    width="100%" height="240" frameborder="0" allowfullscreen allowtransparency></iframe>
+            </div>
+        </section>
     </div>
-    
-    <!--<div class="footer-social">
-        <p><strong>Siga-nos nas redes sociais:</strong></p>
-        <a href="https://www.facebook.com/exemplo" target="_blank">🌐 Facebook</a> |
-        <a href="https://www.instagram.com/exemplo" target="_blank">📸 Instagram</a> |
-        <a href="https://wa.me/5588999999999" target="_blank">💬 WhatsApp</a>
-    </div> -->
-    <p>&copy; 2025 Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá. Todos os direitos reservados.</p>
 
-</footer>
+    <div class="contact-bar">
+        <a href="https://wa.me/5588981394179" target="_blank">
+            <img class="icons" src="https://i.postimg.cc/ZnyWD8P4/whats.png" alt="Whatsapp">
+            WhatsApp
+        </a>
+        <a href="https://instagram.com/straafquixada" target="_blank">
+            <img class="icons" src="https://i.postimg.cc/WtLdRdSr/isnta.png" alt="Instagram">
+            Instagram
+        </a>
+        <a href="https://maps.app.goo.gl/h3denWxCvx3QRhvY9" target="_blank">
+            <img class="icons" src="https://i.postimg.cc/L4qvMGN6/loc.png" alt="Endereço">
+            R. Rodrigues Júnior, 1042 - Centro, Quixadá - CE
+        </a>
+    </div>
 
+    <footer>
+        <p>&copy; 2025 Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá. Todos os
+            direitos reservados.</p>
+    </footer>
+
+    <script>
+        function clique(textoId, button) {
+            let textoEscondido = document.getElementById(textoId);
+            if (textoEscondido.style.display == "block") {
+                textoEscondido.style.display = "none";
+                button.innerHTML = "Mostrar mais";
+            } else {
+                textoEscondido.style.display = "block";
+                button.innerHTML = "Mostrar menos";
+            }
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                let targetId = link.getAttribute('href').substring(1);
+                document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+
+        // Garante que apenas a seção "Início" esteja visível ao carregar a página
+        document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+        document.getElementById('inicio').style.display = 'block';
+    </script>
 </body>
+
 </html>
