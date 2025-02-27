@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STRAAF Quixadá</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Fonte moderna e reset básico */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -19,46 +17,25 @@
             min-height: 100vh;
         }
 
-        /* Cabeçalho estilizado */
         header {
             background-color: #2D6A4F;
             color: white;
             padding: 20px 0;
             text-align: center;
-            font-size: 1.5em;
             font-weight: bold;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .logo {
-            width: 400px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .menu {
-            background-color: #40916C;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .menu :hover {
-            background-color: #2D6A4F;
-        }
-
-        /* Menu de navegação */
         nav {
             background-color: #40916C;
             padding: 15px;
             text-align: center;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             gap: 20px;
         }
 
-        nav a {
+        nav a { 
             color: white;
             text-decoration: none;
             font-weight: 500;
@@ -66,83 +43,61 @@
         }
 
         nav a:hover {
-            color: #D8F3DC;
+            color: white;
+            width: 100px;
             text-decoration: none;
+            background-color: #2D6A4F;
+            border-radius: 15px;
+            transition: background-color 0.3s; 
         }
 
-        /* Container principal */
         .container {
             padding: 40px 10%;
             max-width: 1200px;
             margin: auto;
-            flex: 1; /* Faz o container ocupar o espaço restante */
+            flex: 1; 
         }
 
-        /* Títulos */
         h2 {
             color: #2D6A4F;
             border-left: 5px solid #40916C;
             padding-left: 10px;
-            font-size: 1.8em;
+            font-size: 30px;
         }
 
-        /* Estilização de seções */
         section {
             background: white;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
 
-        /* Seção inicial */
-        #inicio {
-            background-color: #D8F3DC; /* Fundo verde claro */
-            color: #333;
-            padding: 10px 10%;
-            text-align: center;
-        }
-
-        /* Estilo da caixa de boas-vindas */
         .welcome {
-            
-            border-radius: 8px; /* Bordas arredondadas */
-            margin-bottom: 20px; /* Margem inferior */
-            text-align: left; /* Centraliza o texto */
+            background-color: #D8F3DC;
+            color: #333;
+            padding: 20px 10%;
+            text-align: left;
+            border-radius: 8px; 
         }
 
-        /* Tabela */
         table {
             width: 100%;
             margin-top: 20px;
-            border-collapse: collapse;
-        }
-
-        td {
-            vertical-align: top; /* Alinha o conteúdo ao topo */
-            padding: 10px; /* Padding interno */
-        }
+        } 
 
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 0 10%; /* Padding lateral para não colar nas bordas */
+            width: 100%; 
+            margin: 0; 
+            padding: 0; 
         }
 
-        .gallery img {
-            width: 100%;
-            height: auto;
+        .gallery iframe {
+            width: 600px; 
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
         }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Rodapé */
         footer {
             width: 100%;
             background-color: #2D6A4F;
@@ -163,25 +118,29 @@
             vertical-align: middle;
         }
 
-        /* Contato */
         .contact-bar {
             background-color: #40916C;
             display: flex;
-            justify-content: space-around; /* Distribui os itens igualmente */
+            justify-content: space-around; 
             padding: 10px;
             color: white;
-            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
+            flex-wrap: wrap; 
         }
 
         .contact-bar a {
             color: white;
             text-decoration: none;
             padding: 10px;
-            flex: 1 1 30%; /* Permite que os itens cresçam e encolham, ocupando até 30% da largura */
-            text-align: center; /* Centraliza o texto */
+            flex: 1 1 30%; 
+            text-align: center; 
+            transition: background-color 0.3s; 
         }
 
-        /* Responsividade */
+        .contact-bar a:hover {
+            
+            background-color: #2D6A4F; 
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -197,7 +156,7 @@
             }
 
             .contact-bar a {
-                flex: 1 1 100%; /* Em telas menores, cada item ocupa 100% da largura */
+                flex: 1 1 100%; 
             }
         }
 
@@ -224,7 +183,7 @@
 <body>
 
     <header>
-        <img class="logo" src="https://i.postimg.cc/fTtpvfR1/path1.png" alt="Logo STRAAF Quixadá">
+        <img class="logo" src="https://i.postimg.cc/fTtpvfR1/path1.png" alt="Logo STRAAF Quixadá" style="width: 400px">
     </header>
 
     <nav class="menu">
@@ -240,7 +199,7 @@
             <div class="welcome">
                 <table>
                     <tr>
-                        <td colspan="2"> <!--Colspan: une as células em uma única linha --> 
+                        <td colspan="2">
                             <h2>Seja bem-vindo ao STRAAF Quixadá</h2>
                         </td>
                     </tr>
@@ -251,9 +210,9 @@
                                 conhece mais sobre a atuação do sindicato, além de ter acesso a conteúdos exclusivos 
                                 desenvolvidos para fortalecer a agricultura familiar e a comunidade rural.</p>
                         </td> 
-                        <td style="padding-left: 20px;">
-                            <img src="https://i.postimg.cc/8CXDDkqK/logo-verde-site.png" alt="Logo do STRAAF Quixadá"
-                                width="150px" />
+                        <td style="padding-left: 100px;">
+                            <img src="https://i.postimg.cc/8CXDDkqK/logo-verde-site.png" alt="Sede do STRAAF Quixadá"
+                                width="200px" />
                         </td>
                     </tr>
                 </table>
@@ -268,8 +227,10 @@
                 assessoria jurídica e previdenciária, além de incentivar a organização comunitária e fortalecer a
                 agricultura familiar.</p>
             <p>&emsp; Atualmente, a associação é liderada por Conceição Sousa, a primeira mulher a assumir a
-                presidência da entidade. Sua jornada na liderança teve início em 2013, e hoje ela se encontra em seu quarto e
-                último mandato. Além da presidência, a instituição conta com sete secretarias, cada uma com um papel
+                presidência
+                da entidade. Sua jornada na liderança teve início em 2013, e hoje ela se encontra em seu quarto e
+                último
+                mandato. Além da presidência, a instituição conta com sete secretarias, cada uma com um papel
                 fundamental na estrutura do sindicato:</p>
             <ul>
                 <li><b>Secretaria de Finanças</b> – <i>Erivalda</i></li>
@@ -364,28 +325,28 @@
             <p style="font-size: small;">Aqui você encontrará os avisos importantes sobre reuniões, eventos e outras informações relevantes.</p>
             <article>
                 <h3><b>Recesso de Carnaval</b></h3>
-                <p> Informamos que estaremos em recesso para o Carnaval e nossas atividades estarão suspensas durante este
+                <p>&emsp; Informamos que estaremos em recesso para o Carnaval e nossas atividades estarão suspensas durante este
                     período. Retornaremos com nossas ações no dia 06/03/2025. Aproveite este tempo para descansar e se preparar
                     para um novo ciclo de trabalho!</p>
                 <div class="texto-escondido" id="texto-escondido1">
                     <p>📅 <b>Período de Recesso:</b> 01/03/2025 a 05/03/2025 </p>
                     <p>⏰ <b>Retorno:</b> 06/03/2025, expediente normal </p>
-                    <p>📍 <b>Local:</b> Sede do Sindicato</p>
-                    <p> <i>Que este período seja de descanso e renovação! Retornaremos com ainda mais energia para seguir na luta pelos direitos dos trabalhadores rurais. </i></p>
+                    <p>📍 <b>Local:</b> Sede do Sindicato</p> 
+                    <p>Que este período seja de descanso e renovação! Retornaremos com ainda mais energia para seguir na luta pelos direitos dos trabalhadores rurais.</p>
                 </div>
                 <button onclick="clique('texto-escondido1', this)" id="muda">Mostrar mais</button>
             </article>
             <br>
             <article>
                 <h3><b>Retorno das Atividades</b></h3>
-                <p> Informamos que, após o feriado de Carnaval, retomaremos nossas atividades normalmente. Convidamos a
+                <p>&emsp; Informamos que, após o feriado de Carnaval, retomaremos nossas atividades normalmente. Convidamos a
                     todos para seguirmos firmes em nossas ações, fortalecendo a agricultura familiar e a luta pelos direitos dos
                     trabalhadores rurais.</p>
                 <div class="texto-escondido" id="texto-escondido2">
                     <p>📅 <b>Data de Retorno:</b> 06/03/2025 </p>
                     <p>⏰ <b>Horário:</b> 08h </p>
                     <p>📍 <b>Local:</b> Sede do Sindicato</p>
-                    <p> <i>Com energia renovada, seguimos firmes no compromisso de fortalecer a agricultura familiar e defender os direitos dos trabalhadores rurais. Vamos juntos!</i> </p>
+                    <p>Com energia renovada, seguimos firmes no compromisso de fortalecer a agricultura familiar e defender os direitos dos trabalhadores rurais. Vamos juntos!</p>
                     <p>Para mais detalhes, entre em contato conosco! 📲</p>
                 </div>
                 <button onclick="clique('texto-escondido2', this)" id="muda">Mostrar mais</button>
@@ -393,14 +354,14 @@
             <br>
             <article>
                 <h3><b>Encontro das Mulheres</b></h3>
-                <p> Venha participar do Encontro das Mulheres na Bodega Ecológica, um momento especial de troca de
+                <p>&emsp; Venha participar do Encontro das Mulheres na Bodega Ecológica, um momento especial de troca de
                     experiências, fortalecimento e união! Será uma oportunidade para compartilhar vivências, dialogar
                     sobre temas importantes e fortalecer nossa rede de apoio...</p>
                 <div class="texto-escondido" id="texto-escondido3">
                     <p>📍 <b>Local:</b> Bodega Ecológica – Rua Autran Moreno, 162, Centro, Quixadá </p>
                     <p>📅 <b>Data:</b> 13/03/2025 </p>
                     <p>⏰ <b>Horário:</b> 08h - 11h </p>
-                    <p> <i>Junt@s, seguimos construindo um espaço de valorização, luta e protagonismo feminino. Esperamos por você! 💜✨</i></p>
+                    <p>Junt@s, seguimos construindo um espaço de valorização, luta e protagonismo feminino. Esperamos por você! 💜✨</p>
                     <p>Para mais detalhes, entre em contato conosco! 📲</p>
                 </div>
                 <button onclick="clique('texto-escondido3', this)" id="muda">Mostrar mais</button>
@@ -408,15 +369,15 @@
             <br>
             <article>
                 <h3><b>Encontro da Juventude</b></h3>
-                <p> E aí, juventude! Esse momento é nosso!</p>
-                <p> O STRAAF convida vocês para um encontro mais que especial, onde vamos trocar ideias,
+                <p> &emsp;E aí, juventude! Esse momento é nosso!</p>
+                <p> &emsp; O STRAAF convida vocês para um encontro mais que especial, onde vamos trocar ideias,
                     compartilhar experiências e fortalecer a nossa voz no campo. Será uma oportunidade para debater
                     desafios, conquistas e construir juntos um futuro melhor para a juventude rural de Quixadá!</p>
                 <div class="texto-escondido" id="texto-escondido4">
                     <p>📍 <b>Local:</b> Bodega Ecológica – Rua Autran Moreno, 162, Centro, Quixadá </p>
                     <p>📅 <b>Data:</b> 17/03/2025 </p>
                     <p>⏰ <b>Horário:</b> 08h - 11h </p>
-                    <p> <i>A juventude do campo tem voz e vez! Vamos juntos fortalecer nossa atuação e construir novas oportunidades para o futuro. Te esperamos lá! </i></p>
+                    <p>A juventude do campo tem voz e vez! Vamos juntos fortalecer nossa atuação e construir novas oportunidades para o futuro. Te esperamos lá! </p>
                     <p>Para mais detalhes, entre em contato conosco! 📲</p>
                 </div>
                 <button onclick="clique('texto-escondido4', this)" id="muda">Mostrar mais</button>
@@ -426,9 +387,7 @@
         <section id="galeria">
             <h2>Galeria</h2>
             <div class="gallery">
-                <iframe
-                    src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=title&theme=wood&bgColor=&thumbSize=large&showTitle=true&showShadow=true&showGloss=true&showInfo=no&linkTo=view&linkTarget=_blank"
-                    width="100%" height="240" frameborder="0" allowfullscreen allowtransparency></iframe>
+                <iframe src="//v.calameo.com/library/?type=account&id=7875651&rows=1&sortBy=title&theme=wood&bgColor=&thumbSize=large&showTitle=true&showShadow=true&showGloss=true&showInfo=no&linkTo=view&linkTarget=_blank" height="240" frameborder="0" allowfullscreen allowtransparency></iframe>
             </div>
         </section>
     </div>
@@ -474,7 +433,6 @@
             });
         });
 
-        // Garante que apenas a seção "Início" esteja visível ao carregar a página
         document.querySelectorAll('section').forEach(section => section.style.display = 'none');
         document.getElementById('inicio').style.display = 'block';
     </script>
