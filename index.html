@@ -33,29 +33,28 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap; 
         }
 
-        nav a { 
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+        nav a {
+            color: white; 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: background-color 0.3s, color 0.3s; 
+            padding: 10px 15px; 
+            border-radius: 5px; 
         }
 
         nav a:hover {
-            color: white;
-            width: 100px;
-            text-decoration: none;
-            background-color: #2D6A4F;
-            border-radius: 15px;
-            transition: background-color 0.3s; 
+            background-color: #2D6A4F; 
+            color: white; 
         }
 
         .container {
             padding: 40px 10%;
             max-width: 1200px;
             margin: auto;
-            flex: 1; 
+            flex: 1;
         }
 
         h2 {
@@ -78,22 +77,22 @@
             color: #333;
             padding: 20px 10%;
             text-align: left;
-            border-radius: 8px; 
+            border-radius: 8px;
         }
 
         table {
             width: 100%;
             margin-top: 20px;
-        } 
+        }
 
         .gallery {
-            width: 100%; 
-            margin: 0; 
-            padding: 0; 
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         .gallery iframe {
-            width: 600px; 
+            width: 600px;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -102,7 +101,7 @@
             width: 100%;
             background-color: #2D6A4F;
             color: white;
-            text-align: center;
+            text-align: center; 
             padding: 15px;
             margin-top: 20px;
         }
@@ -121,24 +120,23 @@
         .contact-bar {
             background-color: #40916C;
             display: flex;
-            justify-content: space-around; 
+            justify-content: space-around;
             padding: 10px;
             color: white;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
         }
 
         .contact-bar a {
             color: white;
             text-decoration: none;
             padding: 10px;
-            flex: 1 1 30%; 
-            text-align: center; 
-            transition: background-color 0.3s; 
+            flex: 1 1 30%;
+            text-align: center;
+            transition: background-color 0.3s;
         }
 
         .contact-bar a:hover {
-            
-            background-color: #2D6A4F; 
+            background-color: #2D6A4F;
         }
 
         @media (max-width: 768px) {
@@ -156,7 +154,7 @@
             }
 
             .contact-bar a {
-                flex: 1 1 100%; 
+                flex: 1 1 100%;
             }
         }
 
@@ -197,25 +195,11 @@
     <div class="container">
         <section id="inicio">
             <div class="welcome">
-                <table>
-                    <tr>
-                        <td colspan="2">
-                            <h2>Seja bem-vindo ao STRAAF Quixadá</h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>O site do Sindicato dos Trabalhadores Rurais de Quixadá é um espaço dedicado a manter você
-                                sempre informado. Aqui, você encontra avisos importantes, acompanha a agenda de eventos e
-                                conhece mais sobre a atuação do sindicato, além de ter acesso a conteúdos exclusivos 
-                                desenvolvidos para fortalecer a agricultura familiar e a comunidade rural.</p>
-                        </td> 
-                        <td style="padding-left: 100px;">
-                            <img src="https://i.postimg.cc/8CXDDkqK/logo-verde-site.png" alt="Sede do STRAAF Quixadá"
-                                width="200px" />
-                        </td>
-                    </tr>
-                </table>
+                <h2>Seja bem-vindo ao STRAAF Quixadá</h2>
+                <p>O site do Sindicato dos Trabalhadores Rurais de Quixadá é um espaço dedicado a manter você
+                    sempre informado. Aqui, você encontra avisos importantes, acompanha a agenda de eventos e
+                    conhece mais sobre a atuação do sindicato, além de ter acesso a conteúdos exclusivos 
+                    desenvolvidos para fortalecer a agricultura familiar e a comunidade rural.</p>
             </div>
         </section>
 
@@ -408,8 +392,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá. Todos os
-            direitos reservados.</p>
+        <p>&copy; 2025 Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Quixadá. Todos os direitos reservados.</p>
     </footer>
 
     <script>
