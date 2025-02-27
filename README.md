@@ -1,2 +1,2 @@
 # Cordel
-Site do STRAAF de Quixadá com vizualizador dos cordéis digitais interativos.
+Site do STRAAF de Quixadá com visualizador dos cordéis digitais interativos.
